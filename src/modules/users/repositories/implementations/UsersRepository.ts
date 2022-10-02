@@ -24,7 +24,7 @@ export class UsersRepository implements IUsersRepository {
   async findAllUsersOrderedByFirstName(): Promise<User[]> {
     return await this.repository.find({
       order: {first_name: `ASC`}
-    }); // Complete usando raw query
+    });
   }
   async findUserByFullName({
     first_name,
@@ -35,6 +35,6 @@ export class UsersRepository implements IUsersRepository {
         first_name,
         last_name,
       }
-    }); // Complete usando raw query
+    });
   }
 }
