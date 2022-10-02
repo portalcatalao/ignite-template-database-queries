@@ -26,7 +26,6 @@ export class UsersRepository implements IUsersRepository {
       order: {first_name: `ASC`}
     }); // Complete usando raw query
   }
-
   async findUserByFullName({
     first_name,
     last_name,
